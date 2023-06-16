@@ -1,0 +1,33 @@
+import java.util.*;
+interface vehicleone
+{
+	int speed=90;
+	public void distance();
+}
+interface vehicletwo
+{
+	int distance=100;
+	public void speed();
+}
+class vehicle implements vehicleone,vehicletwo
+{
+	public void distance()
+	{
+		int distance=speed*100;
+		System.out.println("Distance travelled is:"+distance);
+	}
+	public void speed()
+	{
+		int speed=distance/100;
+	}
+}
+public class multipleinheritance 
+{
+	public static void main(String[]args)
+	{
+		vehicle obj=new vehicle();
+		System.out.println("Vehicle:");
+		obj.distance();
+		obj.speed();
+	}
+}
